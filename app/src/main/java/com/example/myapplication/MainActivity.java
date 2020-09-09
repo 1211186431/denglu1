@@ -27,7 +27,7 @@ import android.widget.Toast;
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);// 创建一个view，并且将布局加入view中
                  final View viewDialog = LayoutInflater.from(MainActivity.this).inflate(R.layout.zidingyi, null, false);
-                 builder.setTitle("自定义对话框")
+                 builder.setTitle("登录")
                          .setView(viewDialog)
                          .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                              @Override
@@ -37,10 +37,10 @@ import android.widget.Toast;
                                 String userid=editTextUserId.getText().toString();
                                  String userpwd=editTextUserPassword.getText().toString();
                                  if(userid.equals("abc")&&userpwd.equals("123")){
-                                     Toast.makeText(MainActivity.this, "欢迎登录"+userid, Toast.LENGTH_LONG).show();
+                                     Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_LONG).show();
                                  }
                                  else{
-                                     Toast.makeText(MainActivity.this,"error",Toast.LENGTH_LONG).show();
+                                     Toast.makeText(MainActivity.this,"登录失败",Toast.LENGTH_LONG).show();
                                  }
 
                              }        })
